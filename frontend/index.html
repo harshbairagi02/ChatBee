@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatBee – Answers, drafts and ideas in one conversation</title>
+  <meta name="description" content="ChatBee is an AI assistant that helps you write, learn and solve problems faster.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body class="landing">
+  <header class="nav">
+    <a class="brand" href="index.html"><span class="hex logo">🐝</span><span>ChatBee</span></a>
+    <nav class="links" id="links">
+      <a href="#features">Features</a><a href="#how">How it works</a><a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="ghost theme" id="themeToggle" aria-label="Switch theme">◐</button>
+      <a class="btn" href="chat.html">Open ChatBee</a>
+      <button class="icon-btn burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="masthead">
+      <div class="hero-text">
+        <h1>Answers, drafts and ideas, all in one conversation.</h1>
+        <p>ChatBee helps you write faster, understand hard topics and work through problems, without switching between ten tabs.</p>
+        <div class="cta-row">
+          <a class="btn big" href="chat.html">Start chatting</a>
+          <a class="btn-outline" href="#how">See how it works</a>
+        </div>
+        <p class="fine">Free to try. No sign-up needed.</p>
+      </div>
+      <div class="demo" aria-hidden="true">
+        <div class="demo-bar"><span class="hex logo">🐝</span><b>ChatBee</b><span class="status"><i></i>Online</span></div>
+        <div class="demo-body">
+          <div class="msg user"><div class="bubble">Explain APIs like I'm new to coding.</div></div>
+          <div class="msg bot"><span class="hex">🐝</span><div class="bubble">Think of an API as a waiter. You tell it what you want, it takes your order to the kitchen, and brings back exactly what you asked for.</div></div>
+          <div class="msg user"><div class="bubble">Now give me a 3-day practice plan.</div></div>
+          <div class="msg bot"><span class="hex">🐝</span><div class="bubble"><div class="typing"><span></span><span></span><span></span></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Built for everyday work</h2>
+      <div class="rows">
+        <article><span class="hex">✍️</span><div><h3>Write anything</h3><p>Emails, reports, captions and cover letters, drafted in your tone and ready to edit.</p></div></article>
+        <article><span class="hex">💡</span><div><h3>Learn faster</h3><p>Ask for a simple explanation, then keep asking until it makes sense.</p></div></article>
+        <article><span class="hex">🧩</span><div><h3>Solve problems</h3><p>Talk through code, plans or decisions and get clear next steps.</p></div></article>
+        <article><span class="hex">🔒</span><div><h3>Stays on your device</h3><p>Your chat history is saved in your own browser, and you can start fresh anytime.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section alt" id="how">
+      <h2>Up and running in three steps</h2>
+      <ol class="steps">
+        <li><b>Open a new chat</b><span>Click Open ChatBee. There is nothing to install.</span></li>
+        <li><b>Ask in plain language</b><span>Type a question or pick a starter prompt.</span></li>
+        <li><b>Refine the answer</b><span>Reply to adjust the tone, length or detail until it fits.</span></li>
+      </ol>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details><summary>Is ChatBee free?</summary><p>Yes, you can start chatting right away without creating an account.</p></details>
+        <details><summary>Are the answers always correct?</summary><p>No. ChatBee can make mistakes, so double-check anything important such as medical, legal or financial details.</p></details>
+        <details><summary>Where are my chats stored?</summary><p>In your browser on this device. Clearing your browser data removes them.</p></details>
+        <details><summary>Does it work on my phone?</summary><p>Yes. The layout adapts to phones, tablets and desktops.</p></details>
+      </div>
+    </section>
+
+    <section class="band">
+      <h2>Have a question? Ask ChatBee.</h2>
+      <a class="btn big dark" href="chat.html">Start chatting</a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <a class="brand" href="index.html"><span class="hex logo">🐝</span><span>ChatBee</span></a>
+    <p>© 2026 ChatBee. All rights reserved.</p>
+    <nav><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></nav>
+  </footer>
+  <script src="landing.js"></script>
+</body>
+</html>

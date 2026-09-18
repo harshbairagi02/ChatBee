@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatBee – Your AI assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Conversations">
+      <a class="brand" href="index.html"><span class="hex logo">🐝</span><span>ChatBee</span></a>
+      <button class="btn-new" id="newChat">+ New chat</button>
+      <p class="side-label">Recent</p>
+      <nav class="history" id="history"></nav>
+      <div class="side-foot">
+        <button class="ghost" id="themeToggle" aria-label="Switch theme">Switch theme</button>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <main class="chat">
+      <header class="topbar">
+        <button class="icon-btn menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <h1 id="chatTitle">New chat</h1>
+        <span class="status"><i></i>Online</span>
+      </header>
+
+      <section class="messages" id="messages" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <span class="hex hero">🐝</span>
+          <h2>Hi, I'm ChatBee. What are we working on?</h2>
+          <p>Ask a question, draft something, or think through a problem together.</p>
+          <div class="chips">
+            <button data-prompt="Help me write a friendly follow-up email">Write a follow-up email</button>
+            <button data-prompt="Explain how APIs work in simple terms">Explain APIs simply</button>
+            <button data-prompt="Give me a 3-day study plan for JavaScript">Plan a study week</button>
+            <button data-prompt="Suggest names for a small coffee shop">Name my coffee shop</button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="composer-wrap">
+        <div class="composer">
+          <textarea id="input" rows="1" placeholder="Message ChatBee…" aria-label="Message"></textarea>
+          <button id="send" class="send" aria-label="Send message" disabled>➤</button>
+        </div>
+        <p class="note">ChatBee can make mistakes. Check important information.</p>
+      </footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

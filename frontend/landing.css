@@ -1,0 +1,60 @@
+body.landing{height:auto;overflow-x:hidden}
+.landing a{color:inherit}
+.nav{position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:32px;padding:14px max(24px,calc((100% - 1160px)/2));background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.links{display:flex;gap:26px;margin-left:12px;flex:1}
+.links a{text-decoration:none;color:var(--muted);font-weight:500}
+.links a:hover{color:var(--ink)}
+.nav-actions{display:flex;align-items:center;gap:10px}
+.theme{width:auto;font-size:18px}
+.burger{display:none}
+.btn,.btn-outline{display:inline-block;text-decoration:none;font-weight:600;padding:10px 18px;border-radius:12px;background:var(--honey);color:#191C24!important;transition:transform .15s}
+.btn:hover,.btn-outline:hover{transform:translateY(-2px)}
+.btn.big,.btn-outline{padding:14px 26px;font-size:17px;border-radius:14px}
+.btn.dark{background:#191C24;color:#fff!important}
+.btn-outline{background:none;border:1.5px solid var(--line);color:var(--ink)!important}
+
+.masthead{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;max-width:1160px;margin:0 auto;padding:84px 24px 96px}
+.masthead h1{font:700 clamp(38px,5.4vw,64px)/1.06 var(--head);letter-spacing:-.03em}
+.hero-text>p{color:var(--muted);font-size:19px;max-width:46ch;margin-top:22px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.fine{color:var(--muted);font-size:14px;margin-top:16px}
+
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden;transform:rotate(1.2deg)}
+.demo-bar{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.demo-bar b{font-family:var(--head);flex:1}
+.demo-body{padding:22px 18px;display:flex;flex-direction:column;gap:16px;background:var(--bg)}
+.demo .msg{margin:0;max-width:none}
+.demo .bubble{font-size:15px}
+
+.section{max-width:1160px;margin:0 auto;padding:88px 24px}
+.section h2,.band h2{font:700 clamp(28px,3.6vw,42px)/1.15 var(--head);letter-spacing:-.02em;margin-bottom:40px}
+.section.alt{max-width:none;background:var(--surface);border-block:1px solid var(--line);padding-inline:max(24px,calc((100% - 1160px)/2))}
+.rows{display:grid;grid-template-columns:1fr 1fr;column-gap:64px}
+.rows article{display:flex;gap:20px;padding:26px 0;border-top:1px solid var(--line)}
+.rows .hex{width:52px;height:52px;font-size:24px;flex:none}
+.rows h3,.steps b{font:600 20px var(--head);display:block;margin-bottom:6px}
+.rows p,.steps span{color:var(--muted);max-width:42ch}
+.steps{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--honey);padding-top:20px}
+.steps li::before{content:counter(s);font:700 15px var(--head);color:var(--honey-deep);display:block;margin-bottom:10px}
+.faq{max-width:760px}
+.faq details{border-top:1px solid var(--line);padding:20px 0}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font:600 18px var(--head);list-style:none;display:flex;justify-content:space-between}
+.faq summary::after{content:"+";color:var(--honey-deep);font-size:22px}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--muted);margin-top:12px;max-width:60ch}
+
+.band{background:var(--honey);color:#191C24;text-align:center;padding:80px 24px}
+.band h2{margin-bottom:28px}
+.foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:32px max(24px,calc((100% - 1160px)/2));color:var(--muted);font-size:14px}
+.foot nav{display:flex;gap:20px}.foot a{text-decoration:none}
+
+@media(max-width:860px){
+  .masthead{grid-template-columns:1fr;padding-top:48px}.demo{transform:none}
+  .rows,.steps{grid-template-columns:1fr}
+  .burger{display:block}
+  .links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);padding:16px 24px;border-bottom:1px solid var(--line);margin:0}
+  .links.open{display:flex}
+  .nav{gap:12px}.nav-actions{margin-left:auto}
+}
