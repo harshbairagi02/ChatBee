@@ -109,27 +109,97 @@ function renderHistory() {
 
     chats.forEach((chat) => {
 
-        const button =
-            document.createElement("button");
+        // History item container
+        const item = document.createElement("div");
 
-        button.textContent =
-            chat.title;
+        item.className = "history-item";
+
+        // Chat title button
+        const button = document.createElement("button");
+
+        button.textContent = chat.title;
 
         button.className =
             chat === current
-                ? "active"
-                : "";
+                ? "history-chat active"
+                : "history-chat";
 
         button.onclick = () => {
+
             if (isLoading) return;
 
             openChat(chat);
         };
 
-        els.history.appendChild(button);
+        // Delete button
+        const deleteButton = document.createElement("button");
+
+        deleteButton.className = "delete-chat";
+
+        deleteButton.innerHTML = "🗑";
+
+        deleteButton.title = "Delete chat";
+
+        deleteButton.setAttribute(
+            "aria-label",
+            `Delete ${chat.title}`
+        );
+
+        deleteButton.onclick = (e) => {
+
+            e.stopPropagation();
+
+            deleteChat(chat);
+        };
+
+        // Add both buttons
+        item.appendChild(button);
+        item.appendChild(deleteButton);
+
+        els.history.appendChild(item);
     });
 }
 
+// ==========================================
+// DELETE CHAT
+// ==========================================
+
+function deleteChat(chat) {
+
+    if (isLoading) return;
+
+    const confirmed = confirm(
+        `Delete "${chat.title}"?`
+    );
+
+    if (!confirmed) return;
+
+    // Remove chat from array
+    chats = chats.filter(
+        (item) => item !== chat
+    );
+
+    // If deleting the currently open chat
+    if (current === chat) {
+
+        current = null;
+
+        els.messages.innerHTML = "";
+
+        els.messages.appendChild(
+            els.welcome
+        );
+
+        els.title.textContent =
+            "New chat";
+    }
+
+    // Save updated history
+    save();
+
+    // Refresh sidebar
+    renderHistory();
+}
 // ==========================================
 // OPEN CHAT
 // ==========================================
