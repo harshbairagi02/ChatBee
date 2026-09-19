@@ -26,7 +26,7 @@ let isLoading = false;
 // BACKEND
 // ==========================================
 
-const API_URL = "http://localhost:3000/api/chat";
+const API_URL = "https://chatbee-2.onrender.com/api/chat";
 
 // ==========================================
 // SAVE CHATS
