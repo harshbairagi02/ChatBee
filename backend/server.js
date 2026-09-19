@@ -176,13 +176,15 @@ Keep answers reasonably concise unless the user asks for detailed information.
 // START SERVER
 // ==========================================
 
-app.listen(PORT, () => {
+const port = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", () => {
 
     console.log("");
     console.log("====================================");
     console.log("       CHATBEE AI SERVER");
     console.log("====================================");
-    console.log(`Server: http://localhost:${PORT}`);
+    console.log(`Server running on port ${PORT}`);
     console.log("AI Model: Groq GPT-OSS 20B");
     console.log("Streaming: ENABLED");
     console.log("====================================");
